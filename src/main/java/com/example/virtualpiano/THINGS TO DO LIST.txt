@@ -1,0 +1,2 @@
+fix the popup for reverting settings
+fix the dark-light mode for settings and also change passwords

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="1262.0" style="-fx-background-color: #111215;" stylesheets="@piano.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.virtualpiano.KeybindController">
+    <bottom>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Rectangle fx:id="key01" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="1.0" layoutY="44.0" onMouseClicked="#onButtonPress01" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key03" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="36.0" layoutY="44.0" onMouseClicked="#onButtonPress03" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key05" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="71.0" layoutY="44.0" onMouseClicked="#onButtonPress05" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key06" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="106.0" layoutY="44.0" onMouseClicked="#onButtonPress06" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key08" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="141.0" layoutY="44.0" onMouseClicked="#onButtonPress08" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key10" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="176.0" layoutY="44.0" onMouseClicked="#onButtonPress10" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key12" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="211.0" layoutY="44.0" onMouseClicked="#onButtonPress12" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key13" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="246.0" layoutY="44.0" onMouseClicked="#onButtonPress13" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key15" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="281.0" layoutY="44.0" onMouseClicked="#onButtonPress15" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key17" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="316.0" layoutY="44.0" onMouseClicked="#onButtonPress17" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key18" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="351.0" layoutY="44.0" onMouseClicked="#onButtonPress18" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key20" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="386.0" layoutY="44.0" onMouseClicked="#onButtonPress20" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key22" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="421.0" layoutY="44.0" onMouseClicked="#onButtonPress22" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key24" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="456.0" layoutY="44.0" onMouseClicked="#onButtonPress24" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key25" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="491.0" layoutY="44.0" onMouseClicked="#onButtonPress25" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key27" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="526.0" layoutY="44.0" onMouseClicked="#onButtonPress27" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key29" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="561.0" layoutY="44.0" onMouseClicked="#onButtonPress29" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key30" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="596.0" layoutY="44.0" onMouseClicked="#onButtonPress30" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key32" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="631.0" layoutY="44.0" onMouseClicked="#onButtonPress32" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key34" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="666.0" layoutY="44.0" onMouseClicked="#onButtonPress34" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key36" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="701.0" layoutY="44.0" onMouseClicked="#onButtonPress36" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key37" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="736.0" layoutY="44.0" onMouseClicked="#onButtonPress37" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key39" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="771.0" layoutY="44.0" onMouseClicked="#onButtonPress39" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key41" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="806.0" layoutY="44.0" onMouseClicked="#onButtonPress41" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key42" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="841.0" layoutY="44.0" onMouseClicked="#onButtonPress42" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key44" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="876.0" layoutY="44.0" onMouseClicked="#onButtonPress44" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key46" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="911.0" layoutY="44.0" onMouseClicked="#onButtonPress46" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key48" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="946.0" layoutY="44.0" onMouseClicked="#onButtonPress48" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key49" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="981.0" layoutY="44.0" onMouseClicked="#onButtonPress49" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key51" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="1016.0" layoutY="44.0" onMouseClicked="#onButtonPress51" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key53" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="1051.0" layoutY="44.0" onMouseClicked="#onButtonPress53" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key54" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="1086.0" layoutY="44.0" onMouseClicked="#onButtonPress54" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key56" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="1121.0" layoutY="44.0" onMouseClicked="#onButtonPress56" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key58" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="1156.0" layoutY="44.0" onMouseClicked="#onButtonPress58" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key60" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="1191.0" layoutY="44.0" onMouseClicked="#onButtonPress60" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key61" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="1226.0" layoutY="44.0" onMouseClicked="#onButtonPress61" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="35.0" />
+                <Rectangle fx:id="key02" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="23.0" layoutY="45.0" onMouseClicked="#onButtonPress02" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key04" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="58.0" layoutY="44.0" onMouseClicked="#onButtonPress04" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key07" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="128.0" layoutY="44.0" onMouseClicked="#onButtonPress07" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key09" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="163.0" layoutY="44.0" onMouseClicked="#onButtonPress09" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key11" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="198.0" layoutY="44.0" onMouseClicked="#onButtonPress11" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key14" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="268.0" layoutY="44.0" onMouseClicked="#onButtonPress14" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key16" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="303.0" layoutY="43.0" onMouseClicked="#onButtonPress16" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key19" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="373.0" layoutY="43.0" onMouseClicked="#onButtonPress19" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key21" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="408.0" layoutY="43.0" onMouseClicked="#onButtonPress21" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key23" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="443.0" layoutY="43.0" onMouseClicked="#onButtonPress23" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key26" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="513.0" layoutY="43.0" onMouseClicked="#onButtonPress26" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key28" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="548.0" layoutY="45.0" onMouseClicked="#onButtonPress28" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key31" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="618.0" layoutY="45.0" onMouseClicked="#onButtonPress31" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key33" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="653.0" layoutY="45.0" onMouseClicked="#onButtonPress33" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key35" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="688.0" layoutY="45.0" onMouseClicked="#onButtonPress35" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key38" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="758.0" layoutY="43.0" onMouseClicked="#onButtonPress38" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key40" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="793.0" layoutY="45.0" onMouseClicked="#onButtonPress40" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key43" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="863.0" layoutY="45.0" onMouseClicked="#onButtonPress43" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key45" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="898.0" layoutY="45.0" onMouseClicked="#onButtonPress45" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key47" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="933.0" layoutY="45.0" onMouseClicked="#onButtonPress47" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key50" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="1003.0" layoutY="44.0" onMouseClicked="#onButtonPress50" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key52" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="1038.0" layoutY="43.0" onMouseClicked="#onButtonPress52" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key55" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="1108.0" layoutY="43.0" onMouseClicked="#onButtonPress55" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key57" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="1143.0" layoutY="43.0" onMouseClicked="#onButtonPress57" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Rectangle fx:id="key59" arcHeight="5.0" arcWidth="5.0" height="109.0" layoutX="1178.0" layoutY="43.0" onMouseClicked="#onButtonPress59" stroke="BLACK" strokeType="INSIDE" styleClass="Rectangle" width="27.0" />
+                <Label fx:id="l02" layoutX="22.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l03" layoutX="40.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l04" layoutX="57.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l05" layoutX="75.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l06" alignment="CENTER" layoutX="110.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l07" layoutX="128.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l09" layoutX="163.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l11" layoutX="198.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l08" layoutX="145.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l10" layoutX="180.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l12" layoutX="215.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l13" layoutX="250.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l14" layoutX="267.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l15" layoutX="285.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l16" layoutX="302.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l17" layoutX="320.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l18" layoutX="355.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l19" layoutX="373.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l21" layoutX="408.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l23" layoutX="443.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l20" layoutX="390.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l22" layoutX="425.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l24" layoutX="460.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l25" layoutX="495.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l26" layoutX="512.0" layoutY="127.0" styleClass="label1" text="Label" />
+                <Label fx:id="l27" layoutX="530.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l28" layoutX="547.0" layoutY="127.0" styleClass="label1" text="Label" />
+                <Label fx:id="l29" layoutX="565.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l30" layoutX="600.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l31" layoutX="618.0" layoutY="127.0" styleClass="label1" text="Label" />
+                <Label fx:id="l33" layoutX="653.0" layoutY="127.0" styleClass="label1" text="Label" />
+                <Label fx:id="l35" layoutX="688.0" layoutY="127.0" styleClass="label1" text="Label" />
+                <Label fx:id="l32" layoutX="635.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l34" layoutX="670.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l36" layoutX="705.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l37" layoutX="740.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l38" layoutX="757.0" layoutY="127.0" styleClass="label1" text="Label" />
+                <Label fx:id="l39" layoutX="775.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l40" layoutX="792.0" layoutY="127.0" styleClass="label1" text="Label" />
+                <Label fx:id="l41" layoutX="810.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l42" layoutX="845.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l43" layoutX="863.0" layoutY="127.0" styleClass="label1" text="Label" />
+                <Label fx:id="l45" layoutX="898.0" layoutY="127.0" styleClass="label1" text="Label" />
+                <Label fx:id="l47" layoutX="933.0" layoutY="127.0" styleClass="label1" text="Label" />
+                <Label fx:id="l44" layoutX="880.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l46" layoutX="915.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l48" layoutX="950.0" layoutY="161.0" text="Label" />
+                <Label fx:id="l49" layoutX="985.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l50" layoutX="1002.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l51" layoutX="1020.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l52" layoutX="1037.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l53" layoutX="1055.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l54" layoutX="1090.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l55" layoutX="1108.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l57" layoutX="1143.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l59" layoutX="1178.0" layoutY="128.0" styleClass="label1" text="Label" />
+                <Label fx:id="l56" layoutX="1125.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l58" layoutX="1160.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l60" layoutX="1195.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l61" layoutX="1230.0" layoutY="162.0" text="Label" />
+                <Label fx:id="l01" alignment="CENTER" layoutX="3.0" layoutY="161.0" prefHeight="18.0" prefWidth="30.0" text="Label" />
+            </children>
+        </AnchorPane>
+    </bottom>
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+              <Button layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#onGoBackBC" style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/backbuttonwhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label fx:id="Verdict" alignment="CENTER" layoutX="131.0" layoutY="30.0" prefHeight="140.0" prefWidth="1000.0" text="Verdict">
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

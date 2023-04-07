@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@Menu-Style-White.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.virtualpiano.MasterMenuController">
+    <left>
+        <AnchorPane prefHeight="720.0" prefWidth="505.0" style="-fx-background-color: #121212;" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="153.0" layoutY="663.0" mnemonicParsing="false" onAction="#onThemeChangeBC" scaleX="0.5" scaleY="0.5" scaleZ="0.5" text="Toggle Theme" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+                <Button layoutX="153.0" layoutY="599.0" mnemonicParsing="false" onAction="#onRegisterBC" scaleX="0.75" scaleY="0.8" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+                <Label layoutX="47.0" layoutY="525.0" text="Don't have an account yet?" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="503.0" fitWidth="530.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/pianoimg.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="47.0" layoutY="555.0" text="Sign up to get access to all features" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="720.0" prefWidth="774.0" style="-fx-background-color: #ededf7;" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="305.0" layoutY="565.0" mnemonicParsing="false" onAction="#onExitBC" text="Exit" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+                <Button layoutX="305.0" layoutY="419.0" mnemonicParsing="false" onAction="#onPlayPianoBC" text="Play Piano" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+                <Button layoutX="305.0" layoutY="492.0" mnemonicParsing="false" onAction="#onLoginBC" text="Sign In" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="261.0" fitWidth="563.0" layoutX="120.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/RwedEHavZUZHLBv.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

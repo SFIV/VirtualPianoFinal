@@ -1,0 +1,38 @@
+.root{
+    -fx-background-color: lightblue;
+}
+
+.label{
+    -fx-font-family: "Lucida Console";
+    -fx-alignment: center;
+}
+
+#Verdict{
+    -fx-text-fill: black;
+}
+
+.button{
+    -fx-background-radius: 20;
+    -fx-background-color:  #444444;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 50px;
+}
+
+.button:hover{
+    -fx-background-color: #999999;
+}
+
+.password-field{
+    -fx-background-color: #e3effd;
+    -fx-background-radius: 20;
+}
+
+.text-field{
+    -fx-background-color: #e3effd;
+    -fx-background-radius: 20;
+}
+#StreakOnScreen{
+    -fx-pref-width: 40;
+    -fx-pref-height: 14.4;
+    -fx-alignment: center;
+}

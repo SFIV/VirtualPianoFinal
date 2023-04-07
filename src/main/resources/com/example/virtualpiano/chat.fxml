@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.virtualpiano.chatController">
+   <left>
+      <HBox prefHeight="700.0" prefWidth="354.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="700.0" prefWidth="574.0" styleClass="gray-background" stylesheets="@Lan-Style.css">
+               <children>
+                  <AnchorPane prefHeight="699.0" prefWidth="354.0" styleClass="dark-gray-background">
+                     <children>
+                        <ImageView fitHeight="161.0" fitWidth="333.0" layoutX="11.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/VPCover.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="154.0" fitWidth="329.0" layoutX="13.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/CommunityCover.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/iERlYZtcdzsWuCK.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children></VBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="90.0" prefWidth="571.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onGoBackButtonClick" style="-fx-background-color: transparent;">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="98.0" prefWidth="374.0" text="Global Texts">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+                  <Button mnemonicParsing="false" onAction="#onRefreshButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="571.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="MessageArea" alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="504.0" prefWidth="525.0" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="89.0" prefWidth="571.0">
+               <children>
+                  <TextField fx:id="Message" prefHeight="78.0" prefWidth="444.0" promptText="Type something to send...">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <Button fx:id="SendButton" defaultButton="true" mnemonicParsing="false" onAction="#setSendButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="49.0" fitWidth="43.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/send.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

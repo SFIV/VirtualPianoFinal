@@ -1,0 +1,72 @@
+.label{
+    -fx-alignment: Center;
+    -fx-text-fill: black;
+    -fx-pref-width: 30;
+    -fx-font-weight: Bold;
+}
+
+#Verdict{
+    -fx-alignment: Center;
+    -fx-text-fill: SkyBlue;
+    -fx-pref-width: 1000;
+    -fx-font-weight: Bold;
+}
+
+.Rectangle{
+    /*-fx-arc-height: 40;*/
+    /*-fx-arc-width: 20;*/
+}
+
+#sequenceArea
+{
+    -fx-alignment: left;
+    -fx-pref-width: 600;
+    -fx-text-fill: white;
+}
+
+#sequenceArea1
+{
+    -fx-alignment: left;
+    -fx-pref-width: 600;
+    -fx-text-fill: orange;
+}
+
+
+.radio-button:selected{
+    -fx-effect: dropshadow(three-pass-box, red, 10, 0, 0, 0);
+    -fx-inner-border: red;
+    -fx-background-color: black;
+}
+
+.radio-button:selected .radio{
+    -fx-background-color: red;
+}
+
+.label1{
+    -fx-alignment: Center;
+    -fx-text-fill: white;
+    -fx-pref-width: 30;
+    -fx-font-weight: Bold;
+}
+
+.labelwhite{
+    -fx-alignment: Center;
+    -fx-text-fill: white;
+    -fx-pref-width: 100;
+    -fx-font-weight: Bold;
+}
+
+.labelForRecord{
+    -fx-pref-width: 250;
+    -fx-text-fill: white;
+}
+
+.labelForTimer{
+    -fx-pref-width: 150;
+    -fx-text-fill: white;
+}
+
+.labelForScore{
+    -fx-pref-width: 200;
+    -fx-text-fill: white;
+}
