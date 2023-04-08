@@ -6,12 +6,18 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,6 +25,8 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 public class SelectGameController implements Initializable {
+
+    public static String sequence = new String();
 
     public static int id;
     @FXML
@@ -124,8 +132,33 @@ public class SelectGameController implements Initializable {
         }
     }
 
-    public void onSongClick()
-    {
+    @FXML
+    public void onSongClick(javafx.scene.input.MouseEvent mouseEvent) {
+        Integer index = tableView.getSelectionModel().getSelectedIndex();
+        if(index <= -1){
+            return;
+        }
 
+        String songName = NAME.getCellData(index).toString();
+
+        changeScene_mouse(mouseEvent);
+
+        System.out.println(songName);
+        sequence = SQL.getGameSequence_fromTableView(songName);
+
+        System.out.println( "From On Song click Function " + sequence);
+    }
+
+    private void changeScene_mouse(MouseEvent mouseEvent) {
+        try {
+            Parent root = FXMLLoader.load(VirtualPianoMain.class.getResource("game_searchByPreference.fxml"));
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

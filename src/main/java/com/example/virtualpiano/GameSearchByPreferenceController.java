@@ -1,35 +1,6 @@
 package com.example.virtualpiano;
 
 import javafx.animation.FillTransition;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.util.Duration;
-import javafx.animation.FillTransition;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Menu;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.util.Duration;
-import javax.sound.midi.*;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javax.sound.midi.*;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.animation.FillTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.beans.value.ChangeListener;
@@ -39,24 +10,28 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
+
 import javax.sound.midi.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class sequenceGameController implements Initializable{
-
+public class GameSearchByPreferenceController implements Initializable {
     MidiChannel channel;
     public static int MIDI_CHANNEL = 0;
     //    private static int MIDI_CHANNEL = 9;
     private static int VELOCITY = 75;
 
-    @FXML private Label recordingName;
-    @FXML private Label recordTime;
-    @FXML private Slider mySlider;
+    @FXML
+    private Label recordingName;
+    @FXML
+    private Label recordTime;
+    @FXML
+    private Slider mySlider;
 
     private static int mySliderInt;
     private static Double DURATION_SECONDS = .075;
@@ -67,9 +42,8 @@ public class sequenceGameController implements Initializable{
     myTime timeRecord = new myTime("0:0:0");
     Timeline timeline = new Timeline(
             new KeyFrame(Duration.seconds(1),
-                    e-> {
-                        if(recording == true)
-                        {
+                    e -> {
+                        if (recording == true) {
                             timeRecord.oneSecondPassed();
                             recordTime.setText(timeRecord.getCurrentTime());
                         }
@@ -91,7 +65,8 @@ public class sequenceGameController implements Initializable{
             key53 = new Rectangle(), key54 = new Rectangle(), key55 = new Rectangle(), key56 = new Rectangle(),
             key57 = new Rectangle(), key58 = new Rectangle(), key59 = new Rectangle(), key60 = new Rectangle(),
             key61 = new Rectangle();
-    @FXML private Label l01 = new Label(), l02 = new Label(), l03 = new Label(), l04 = new Label(), l05 = new Label(), l06 = new Label(), l07 = new Label(), l08 = new Label(), l09 = new Label(), l10 = new Label(),
+    @FXML
+    private Label l01 = new Label(), l02 = new Label(), l03 = new Label(), l04 = new Label(), l05 = new Label(), l06 = new Label(), l07 = new Label(), l08 = new Label(), l09 = new Label(), l10 = new Label(),
             l11 = new Label(), l12 = new Label(), l13 = new Label(), l14 = new Label(), l15 = new Label(), l16 = new Label(), l17 = new Label(), l18 = new Label(), l19 = new Label(), l20 = new Label(),
             l21 = new Label(), l22 = new Label(), l23 = new Label(), l24 = new Label(), l25 = new Label(), l26 = new Label(), l27 = new Label(), l28 = new Label(), l29 = new Label(), l30 = new Label(),
             l31 = new Label(), l32 = new Label(), l33 = new Label(), l34 = new Label(), l35 = new Label(), l36 = new Label(), l37 = new Label(), l38 = new Label(), l39 = new Label(), l40 = new Label(),
@@ -162,21 +137,18 @@ public class sequenceGameController implements Initializable{
     private FillTransition ft61 = new FillTransition(Duration.seconds(DURATION_SECONDS), key61, Color.WHITE, setTransitionColor);
 
 
-
-
-    @FXML protected void onGoBackBC(ActionEvent event) throws IOException {
-        if(mySettings.LoggedIn) MenuSwitch.MainMenu(event);
+    @FXML
+    protected void onGoBackBC(ActionEvent event) throws IOException {
+        if (mySettings.LoggedIn) MenuSwitch.MainMenu(event);
         else MenuSwitch.MasterMenu(event);
     }
 
-    @FXML protected void onRecordBC(){
-        if(recording == false)
-        {
+    @FXML
+    protected void onRecordBC() {
+        if (recording == false) {
             recording = true;
             audioRecorder.start();
-        }
-        else
-        {
+        } else {
             recording = false;
             audioRecorder.stop();
             recordTime.setText("");
@@ -190,425 +162,427 @@ public class sequenceGameController implements Initializable{
     void onButtonPress01() {
         ft01.setShape(key01);
         ft01.play();
-        channel.noteOn(OFFSET +24, VELOCITY); // C2
+        channel.noteOn(OFFSET + 24, VELOCITY); // C2
     }
 
     @FXML
     void onButtonPress02() {
         ft02.setShape(key02);
         ft02.play();
-        channel.noteOn(OFFSET +25, VELOCITY); // C#2
+        channel.noteOn(OFFSET + 25, VELOCITY); // C#2
     }
 
     @FXML
     void onButtonPress03() {
         ft03.setShape(key03);
         ft03.play();
-        channel.noteOn(OFFSET +26, VELOCITY); // D2
+        channel.noteOn(OFFSET + 26, VELOCITY); // D2
     }
 
     @FXML
     void onButtonPress04() {
         ft04.setShape(key04);
         ft04.play();
-        channel.noteOn(OFFSET +27, VELOCITY); // D#2
+        channel.noteOn(OFFSET + 27, VELOCITY); // D#2
     }
 
     @FXML
     void onButtonPress05() {
         ft05.setShape(key05);
         ft05.play();
-        channel.noteOn(OFFSET +28, VELOCITY); // E2
+        channel.noteOn(OFFSET + 28, VELOCITY); // E2
     }
 
     @FXML
     void onButtonPress06() {
         ft06.setShape(key06);
         ft06.play();
-        channel.noteOn(OFFSET +29, VELOCITY); // F2
+        channel.noteOn(OFFSET + 29, VELOCITY); // F2
     }
 
     @FXML
     void onButtonPress07() {
         ft07.setShape(key07);
         ft07.play();
-        channel.noteOn(OFFSET +30, VELOCITY); // F#2
+        channel.noteOn(OFFSET + 30, VELOCITY); // F#2
     }
 
     @FXML
     void onButtonPress08() {
         ft08.setShape(key08);
         ft08.play();
-        channel.noteOn(OFFSET +31, VELOCITY); // G2
+        channel.noteOn(OFFSET + 31, VELOCITY); // G2
     }
 
     @FXML
     void onButtonPress09() {
         ft09.setShape(key09);
         ft09.play();
-        channel.noteOn(OFFSET +32, VELOCITY); // G#2
+        channel.noteOn(OFFSET + 32, VELOCITY); // G#2
     }
 
     @FXML
     void onButtonPress10() {
         ft10.setShape(key10);
         ft10.play();
-        channel.noteOn(OFFSET +33, VELOCITY); // A2
+        channel.noteOn(OFFSET + 33, VELOCITY); // A2
     }
 
     @FXML
     void onButtonPress11() {
         ft11.setShape(key11);
         ft11.play();
-        channel.noteOn(OFFSET +34, VELOCITY); // A#2
+        channel.noteOn(OFFSET + 34, VELOCITY); // A#2
     }
 
     @FXML
     void onButtonPress12() {
         ft12.setShape(key12);
         ft12.play();
-        channel.noteOn(OFFSET +35, VELOCITY); // B2
+        channel.noteOn(OFFSET + 35, VELOCITY); // B2
     }
 
     @FXML
     void onButtonPress13() {
         ft13.setShape(key13);
         ft13.play();
-        channel.noteOn(OFFSET +36, VELOCITY); // C3
+        channel.noteOn(OFFSET + 36, VELOCITY); // C3
     }
 
     @FXML
     void onButtonPress14() {
         ft14.setShape(key14);
         ft14.play();
-        channel.noteOn(OFFSET +37, VELOCITY); // C#3
+        channel.noteOn(OFFSET + 37, VELOCITY); // C#3
     }
 
     @FXML
     void onButtonPress15() {
         ft15.setShape(key15);
         ft15.play();
-        channel.noteOn(OFFSET +38, VELOCITY); // D3
+        channel.noteOn(OFFSET + 38, VELOCITY); // D3
     }
 
     @FXML
     void onButtonPress16() {
         ft16.setShape(key16);
         ft16.play();
-        channel.noteOn(OFFSET +39, VELOCITY); // D#3
+        channel.noteOn(OFFSET + 39, VELOCITY); // D#3
     }
 
     @FXML
     void onButtonPress17() {
         ft17.setShape(key17);
         ft17.play();
-        channel.noteOn(OFFSET +40, VELOCITY); // E3
+        channel.noteOn(OFFSET + 40, VELOCITY); // E3
     }
 
     @FXML
     void onButtonPress18() {
         ft18.setShape(key18);
         ft18.play();
-        channel.noteOn(OFFSET +41, VELOCITY); // F3
+        channel.noteOn(OFFSET + 41, VELOCITY); // F3
     }
 
     @FXML
     void onButtonPress19() {
         ft19.setShape(key19);
         ft19.play();
-        channel.noteOn(OFFSET +42, VELOCITY); // F#3
+        channel.noteOn(OFFSET + 42, VELOCITY); // F#3
     }
 
     @FXML
     void onButtonPress20() {
         ft20.setShape(key20);
         ft20.play();
-        channel.noteOn(OFFSET +43, VELOCITY); // G3
+        channel.noteOn(OFFSET + 43, VELOCITY); // G3
     }
 
     @FXML
     void onButtonPress21() {
         ft21.setShape(key21);
         ft21.play();
-        channel.noteOn(OFFSET +44, VELOCITY); // G#3
+        channel.noteOn(OFFSET + 44, VELOCITY); // G#3
     }
 
     @FXML
     void onButtonPress22() {
         ft22.setShape(key22);
         ft22.play();
-        channel.noteOn(OFFSET +45, VELOCITY); // A3
+        channel.noteOn(OFFSET + 45, VELOCITY); // A3
     }
 
     @FXML
     void onButtonPress23() {
         ft23.setShape(key23);
         ft23.play();
-        channel.noteOn(OFFSET +46, VELOCITY); // A#3
+        channel.noteOn(OFFSET + 46, VELOCITY); // A#3
     }
 
     @FXML
     void onButtonPress24() {
         ft24.setShape(key24);
         ft24.play();
-        channel.noteOn(OFFSET +47, VELOCITY); // B3
+        channel.noteOn(OFFSET + 47, VELOCITY); // B3
     }
 
     @FXML
     void onButtonPress25() {
         ft25.setShape(key25);
         ft25.play();
-        channel.noteOn(OFFSET +48, VELOCITY); // C4
+        channel.noteOn(OFFSET + 48, VELOCITY); // C4
     }
 
     @FXML
     void onButtonPress26() {
         ft26.setShape(key26);
         ft26.play();
-        channel.noteOn(OFFSET +49, VELOCITY); // C#4
+        channel.noteOn(OFFSET + 49, VELOCITY); // C#4
     }
 
     @FXML
     void onButtonPress27() {
         ft27.setShape(key27);
         ft27.play();
-        channel.noteOn(OFFSET +50, VELOCITY); // D4
+        channel.noteOn(OFFSET + 50, VELOCITY); // D4
     }
 
     @FXML
     void onButtonPress28() {
         ft28.setShape(key28);
         ft28.play();
-        channel.noteOn(OFFSET +51, VELOCITY); // D#4
+        channel.noteOn(OFFSET + 51, VELOCITY); // D#4
     }
 
     @FXML
     void onButtonPress29() {
         ft29.setShape(key29);
         ft29.play();
-        channel.noteOn(OFFSET +52, VELOCITY); // E4
+        channel.noteOn(OFFSET + 52, VELOCITY); // E4
     }
 
     @FXML
     void onButtonPress30() {
         ft30.setShape(key30);
         ft30.play();
-        channel.noteOn(OFFSET +53, VELOCITY); // F4
+        channel.noteOn(OFFSET + 53, VELOCITY); // F4
     }
 
     @FXML
     void onButtonPress31() {
         ft31.setShape(key31);
         ft31.play();
-        channel.noteOn(OFFSET +54, VELOCITY); // F#4
+        channel.noteOn(OFFSET + 54, VELOCITY); // F#4
     }
 
     @FXML
     void onButtonPress32() {
         ft32.setShape(key32);
         ft32.play();
-        channel.noteOn(OFFSET +55, VELOCITY); // G4
+        channel.noteOn(OFFSET + 55, VELOCITY); // G4
     }
 
     @FXML
     void onButtonPress33() {
         ft33.setShape(key33);
         ft33.play();
-        channel.noteOn(OFFSET +56, VELOCITY); // G#4
+        channel.noteOn(OFFSET + 56, VELOCITY); // G#4
     }
 
     @FXML
     void onButtonPress34() {
         ft34.setShape(key34);
         ft34.play();
-        channel.noteOn(OFFSET +57, VELOCITY); // A4
+        channel.noteOn(OFFSET + 57, VELOCITY); // A4
     }
 
     @FXML
     void onButtonPress35() {
         ft35.setShape(key35);
         ft35.play();
-        channel.noteOn(OFFSET +58, VELOCITY); // A#4
+        channel.noteOn(OFFSET + 58, VELOCITY); // A#4
     }
 
     @FXML
     void onButtonPress36() {
         ft36.setShape(key36);
         ft36.play();
-        channel.noteOn(OFFSET +59, VELOCITY); // B4
+        channel.noteOn(OFFSET + 59, VELOCITY); // B4
     }
 
     @FXML
     void onButtonPress37() {
         ft37.setShape(key37);
         ft37.play();
-        channel.noteOn(OFFSET +60, VELOCITY); // C5
+        channel.noteOn(OFFSET + 60, VELOCITY); // C5
     }
 
     @FXML
     void onButtonPress38() {
         ft38.setShape(key38);
         ft38.play();
-        channel.noteOn(OFFSET +61, VELOCITY); // C#5
+        channel.noteOn(OFFSET + 61, VELOCITY); // C#5
     }
 
     @FXML
     void onButtonPress39() {
         ft39.setShape(key39);
         ft39.play();
-        channel.noteOn(OFFSET +62, VELOCITY); // D5
+        channel.noteOn(OFFSET + 62, VELOCITY); // D5
     }
 
     @FXML
     void onButtonPress40() {
         ft40.setShape(key40);
         ft40.play();
-        channel.noteOn(OFFSET +63, VELOCITY); // D#5
+        channel.noteOn(OFFSET + 63, VELOCITY); // D#5
     }
+
     @FXML
     void onButtonPress41() {
         ft41.setShape(key41);
         ft41.play();
-        channel.noteOn(OFFSET +64, VELOCITY); // E5
+        channel.noteOn(OFFSET + 64, VELOCITY); // E5
     }
 
     @FXML
     void onButtonPress42() {
         ft42.setShape(key42);
         ft42.play();
-        channel.noteOn(OFFSET +65, VELOCITY); // F5
+        channel.noteOn(OFFSET + 65, VELOCITY); // F5
     }
 
     @FXML
     void onButtonPress43() {
         ft43.setShape(key43);
         ft43.play();
-        channel.noteOn(OFFSET +66, VELOCITY); // F#5
+        channel.noteOn(OFFSET + 66, VELOCITY); // F#5
     }
 
     @FXML
     void onButtonPress44() {
         ft44.setShape(key44);
         ft44.play();
-        channel.noteOn(OFFSET +67, VELOCITY); // G5
+        channel.noteOn(OFFSET + 67, VELOCITY); // G5
     }
 
     @FXML
     void onButtonPress45() {
         ft45.setShape(key45);
         ft45.play();
-        channel.noteOn(OFFSET +68, VELOCITY); // G#5
+        channel.noteOn(OFFSET + 68, VELOCITY); // G#5
     }
 
     @FXML
     void onButtonPress46() {
         ft46.setShape(key46);
         ft46.play();
-        channel.noteOn(OFFSET +69, VELOCITY); // A5
+        channel.noteOn(OFFSET + 69, VELOCITY); // A5
     }
 
     @FXML
     void onButtonPress47() {
         ft47.setShape(key47);
         ft47.play();
-        channel.noteOn(OFFSET +70, VELOCITY); // A#5
+        channel.noteOn(OFFSET + 70, VELOCITY); // A#5
     }
 
     @FXML
     void onButtonPress48() {
         ft48.setShape(key48);
         ft48.play();
-        channel.noteOn(OFFSET +71, VELOCITY); // B5
+        channel.noteOn(OFFSET + 71, VELOCITY); // B5
     }
 
     @FXML
     void onButtonPress49() {
         ft49.setShape(key49);
         ft49.play();
-        channel.noteOn(OFFSET +72, VELOCITY); // C6
+        channel.noteOn(OFFSET + 72, VELOCITY); // C6
     }
 
     @FXML
     void onButtonPress50() {
         ft50.setShape(key50);
         ft50.play();
-        channel.noteOn(OFFSET +73, VELOCITY); // C#6
+        channel.noteOn(OFFSET + 73, VELOCITY); // C#6
     }
 
     @FXML
     void onButtonPress51() {
         ft51.setShape(key51);
         ft51.play();
-        channel.noteOn(OFFSET +74, VELOCITY); // D6
+        channel.noteOn(OFFSET + 74, VELOCITY); // D6
     }
 
     @FXML
     void onButtonPress52() {
         ft52.setShape(key52);
         ft52.play();
-        channel.noteOn(OFFSET +75, VELOCITY); // D#6
+        channel.noteOn(OFFSET + 75, VELOCITY); // D#6
     }
 
     @FXML
     void onButtonPress53() {
         ft53.setShape(key53);
         ft53.play();
-        channel.noteOn(OFFSET +76, VELOCITY); // E6
+        channel.noteOn(OFFSET + 76, VELOCITY); // E6
     }
 
     @FXML
     void onButtonPress54() {
         ft54.setShape(key54);
         ft54.play();
-        channel.noteOn(OFFSET +77, VELOCITY); // F6
+        channel.noteOn(OFFSET + 77, VELOCITY); // F6
     }
 
     @FXML
     void onButtonPress55() {
         ft55.setShape(key55);
         ft55.play();
-        channel.noteOn(OFFSET +78, VELOCITY); // F#6
+        channel.noteOn(OFFSET + 78, VELOCITY); // F#6
     }
 
     @FXML
     void onButtonPress56() {
         ft56.setShape(key56);
         ft56.play();
-        channel.noteOn(OFFSET +79, VELOCITY); // G6
+        channel.noteOn(OFFSET + 79, VELOCITY); // G6
     }
 
     @FXML
     void onButtonPress57() {
         ft57.setShape(key57);
         ft57.play();
-        channel.noteOn(OFFSET +80, VELOCITY); // G#6
+        channel.noteOn(OFFSET + 80, VELOCITY); // G#6
     }
 
     @FXML
     void onButtonPress58() {
         ft58.setShape(key58);
         ft58.play();
-        channel.noteOn(OFFSET +81, VELOCITY); // A6
+        channel.noteOn(OFFSET + 81, VELOCITY); // A6
     }
 
     @FXML
     void onButtonPress59() {
         ft59.setShape(key59);
         ft59.play();
-        channel.noteOn(OFFSET +82, VELOCITY); // A#6
+        channel.noteOn(OFFSET + 82, VELOCITY); // A#6
     }
 
     @FXML
     void onButtonPress60() {
         ft60.setShape(key60);
         ft60.play();
-        channel.noteOn(OFFSET +83, VELOCITY); // B6
+        channel.noteOn(OFFSET + 83, VELOCITY); // B6
     }
+
     @FXML
     void onButtonPress61() {
         ft61.setShape(key61);
         ft61.play();
-        channel.noteOn(OFFSET +84, VELOCITY); // C7
+        channel.noteOn(OFFSET + 84, VELOCITY); // C7
     }
 
 
@@ -629,7 +603,8 @@ public class sequenceGameController implements Initializable{
             throw new RuntimeException(e);
         }
     }
-    public sequenceGameController() throws InvalidMidiDataException, IOException {
+
+    public GameSearchByPreferenceController() throws InvalidMidiDataException, IOException {
 
 
         // Keys 01 to 20
@@ -820,8 +795,10 @@ public class sequenceGameController implements Initializable{
         MIDI_CHANNEL = 0;
     }
 
-    public void initialize(URL url, ResourceBundle rb)
-    {
+    public void initialize(URL url, ResourceBundle rb) {
+        sequenceArea.setText(SelectGameController.sequence);
+        System.out.println("From initialize Function " + SelectGameController.sequence);
+
         recordingName.setText("");
         recordTime.setText("");
         timeline.setCycleCount(Timeline.INDEFINITE);
@@ -831,7 +808,7 @@ public class sequenceGameController implements Initializable{
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
                 mySliderInt = (int) mySlider.getValue();
-                OFFSET = 12 + 12*(mySliderInt);
+                OFFSET = 12 + 12 * (mySliderInt);
                 try {
                     loadChannel();
                 } catch (InvalidMidiDataException | IOException e) {
@@ -904,28 +881,29 @@ public class sequenceGameController implements Initializable{
         l61.setText(Character.toString(mySettings.intCodeToChar[mySettings.buttonToCode[61]]));
         onStartButtonClick();
     }
+
     @FXML
     Label sequenceArea;
+
     @FXML
     Label sequenceArea1;
     @FXML
-            Label personalLabel;
+    Label personalLabel;
     @FXML
-            Label globalLabel;
+    Label globalLabel;
 
-    int personalBest=0;
+    int personalBest = 0;
     String seq;
     String globalString;
     String FinalSeq;
     String FinalSeq1;
 
-    int count=0;
+    int count = 0;
     int len = 0;
     int score = 0;
 
     @FXML
-    void onStartButtonClick()
-    {
+    void onStartButtonClick() {
         count = 0;
         len = 0;
         score = 0;
@@ -935,11 +913,10 @@ public class sequenceGameController implements Initializable{
         System.out.println("From Ivan er Function " + seq);
 //        System.out.println("Sequence Retrieved");
         FinalSeq = "";
-        FinalSeq1= "";
-        for(int i=0;i<seq.length();i++)
-        {
-            FinalSeq+=seq.charAt(i);
-            if(seq.charAt(i)!=' ')
+        FinalSeq1 = "";
+        for (int i = 0; i < seq.length(); i++) {
+            FinalSeq += seq.charAt(i);
+            if (seq.charAt(i) != ' ')
                 len++;
         }
         sequenceArea.setText(FinalSeq);
@@ -949,57 +926,46 @@ public class sequenceGameController implements Initializable{
     }
 
     @FXML
-    private void handleKeyPressed(KeyEvent event)
-    {
+    private void handleKeyPressed(KeyEvent event) {
         String C = event.getText();
-        if(C.charAt(0)==(FinalSeq.charAt(0)))
-        {
+        if (C.charAt(0) == (FinalSeq.charAt(0))) {
             updateScore(true);
-        }
-        else
-        {
+        } else {
             updateScore(false);
         }
     }
 
-    private void updateScore(boolean flag)
-    {
-        if(flag)
-        {
+    private void updateScore(boolean flag) {
+        if (flag) {
             score++;
         }
         count++;
-        if(count==len)
-        {
-            double accuracy = score*100.0/len;
-            sequenceArea.setText("Final Score: "+ score + '\n' + "Accuracy: "+ accuracy);
+        if (count == len) {
+            double accuracy = score * 100.0 / len;
+            sequenceArea.setText("Final Score: " + score + '\n' + "Accuracy: " + accuracy);
             sequenceArea1.setText("");
-            personalBest= SQL.insertScore(SelectGameController.id,score);
-            personalLabel.setText(String.valueOf("Personal Best: "+ personalBest));
+            personalBest = SQL.insertScore(SelectGameController.id, score);
+            personalLabel.setText(String.valueOf("Personal Best: " + personalBest));
             globalString = SQL.getGlobalMax(SelectGameController.id);
-            globalLabel.setText("Global Best: "+globalString);
+            globalLabel.setText("Global Best: " + globalString);
             count = 0;
             len = 0;
             score = 0;
             return;
         }
-        if(FinalSeq.charAt(1) == ' ')
-        {
+        if (FinalSeq.charAt(1) == ' ') {
             FinalSeq1 += FinalSeq.charAt(0);
             FinalSeq1 += FinalSeq.charAt(1);
             FinalSeq = FinalSeq.substring(2);
-        }
-        else
-        {
+        } else {
             FinalSeq1 += FinalSeq.charAt(0);
-            FinalSeq= FinalSeq.substring(1);
+            FinalSeq = FinalSeq.substring(1);
         }
 //        sequenceArea.setText(FinalSeq);
         sequenceArea1.setText(FinalSeq1);
     }
 
-    public void Songset_text(String seq)
-    {
+    public void Songset_text(String seq) {
         count = 0;
         len = 0;
         score = 0;
@@ -1009,11 +975,10 @@ public class sequenceGameController implements Initializable{
         System.out.println("From Ivan er Function " + seq);
 //        System.out.println("Sequence Retrieved");
         FinalSeq = "";
-        FinalSeq1= "";
-        for(int i=0;i<seq.length();i++)
-        {
-            FinalSeq+=seq.charAt(i);
-            if(seq.charAt(i)!=' ')
+        FinalSeq1 = "";
+        for (int i = 0; i < seq.length(); i++) {
+            FinalSeq += seq.charAt(i);
+            if (seq.charAt(i) != ' ')
                 len++;
         }
         sequenceArea.setText(FinalSeq);
@@ -1022,4 +987,3 @@ public class sequenceGameController implements Initializable{
         personalLabel.setText("");
     }
 }
-

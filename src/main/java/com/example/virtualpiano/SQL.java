@@ -1,6 +1,13 @@
 package com.example.virtualpiano;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.sql.*;
 
 public class SQL {
@@ -418,6 +425,43 @@ public class SQL {
         return sequence;
     }
 
+    public static String getGameSequence_fromTableView(String NAME)
+    {
+        String sequence = new String();
+        String sqlQuery = new String();
+        try{
+            // step1 load the driver class
+            Class.forName(className);
+
+            // step2 create the connection object
+            Connection con = DriverManager.getConnection(url, username, password);
+            sqlQuery = "select SEQUENCE from game where NAME = ?";
+
+
+            // step3 create the statement object
+
+            PreparedStatement pStmt = con.prepareStatement(sqlQuery);
+            pStmt.setString(1,NAME);
+            ResultSet rs = pStmt.executeQuery();
+            while(rs.next())
+            {
+                sequence = rs.getString(1);
+            }
+
+            // step4 drop all the connections
+            con.close();
+            pStmt.close();
+        } catch (SQLException e)
+        {
+            System.out.println(" Error while connecting to database. Exception code : " + e);
+        } catch (ClassNotFoundException e)
+        {
+            System.out.println(" Failed to register driver . Exception code : " + e );
+        }
+
+        return sequence;
+    }
+
 //    public static void getAllSongs()
 //    {
 ////        String sequence = new String();
@@ -615,4 +659,5 @@ public class SQL {
         }
         return ret;
     }
+
 }

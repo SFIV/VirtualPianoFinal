@@ -229,7 +229,7 @@ public class MenuSwitch {
         mystage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader(VirtualPianoMain.class.getResource("chat.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        mystage.setTitle("LAN chat");
+        mystage.setTitle("Global chat");
         mystage.setScene(scene);
         mystage.centerOnScreen();
         mystage.show();
