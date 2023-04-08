@@ -216,7 +216,7 @@ public class SQL {
         String sqlQuery;
         try{
             // step1 load the driver class
-            Class.forName(className;
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);

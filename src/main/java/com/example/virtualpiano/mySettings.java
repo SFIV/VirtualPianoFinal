@@ -26,9 +26,11 @@ public class mySettings {
     public static char[] intCodeToChar = new char[MAXCODE];
     public static int[] charToIntCode = new int[MAXCODE];
 
-    public static String iconPath = "C:\\Users\\LENOVO\\Desktop\\VirtualPiano\\src\\main\\resources\\com\\example\\img\\logo.png";
+    public static String iconPath = "D:\\GitHUB\\VirtualPianoFinal\\src\\main\\resources\\com\\example\\img\\logo.png";
+//    public static String iconPath = "C:\\Users\\LENOVO\\Desktop\\VirtualPiano\\src\\main\\resources\\com\\example\\img\\logo.png";
 
-    public static String folderPath = "C:\\Users\\LENOVO\\Desktop\\VirtualPiano\\recordings";
+    public static String folderPath = "D:\\GitHUB\\VirtualPianoFinal\\recordings";
+//    public static String folderPath = "C:\\Users\\LENOVO\\Desktop\\VirtualPiano\\recordings";
 
     public static void openFolder(String folderPath) {
         if (Desktop.isDesktopSupported()) {
