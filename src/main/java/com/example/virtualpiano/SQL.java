@@ -1,25 +1,27 @@
 package com.example.virtualpiano;
+import javafx.scene.control.cell.PropertyValueFactory;
+
 import java.sql.*;
 
 public class SQL {
 
-    private static String className = "com.mysql.cj.jdbc.Driver";   // for MySQL workbench or PlanetScale Database
-//    private static String className = "oracle.jdbc.driver.OracleDriver";  // for Oracle Database
+    public static String className = "com.mysql.cj.jdbc.Driver";   // for MySQL workbench or PlanetScale Database
+//    public static String className = "oracle.jdbc.driver.OracleDriver";  // for Oracle Database
 
 //  for PlaneScale Online Database
-//    private static String url = "jdbc:mysql://aws.connect.psdb.cloud/piano_application?sslMode=VERIFY_IDENTITY";    // for planetScale Online Database
-//    private static String username="ujuwtj5pehty8qq65f4x";    // for PlanetScale Online Database
-//    private static String password="pscale_pw_eNariAt6PloA0qudPxZ7zGHyFjyB3LmWFcgU8NLmWWu";   // for PlanetScale Online Database
+//    public static String url = "jdbc:mysql://aws.connect.psdb.cloud/piano_application?sslMode=VERIFY_IDENTITY";    // for planetScale Online Database
+//    public static String username="ujuwtj5pehty8qq65f4x";    // for PlanetScale Online Database
+//    public static String password="pscale_pw_eNariAt6PloA0qudPxZ7zGHyFjyB3LmWFcgU8NLmWWu";   // for PlanetScale Online Database
 
     // for MySQL Workbench
-    private static String url = "jdbc:mysql://localhost:3306/piano_application";  // for MySQL Workbench
-    private static String username="root";  // for MySQL Workbench
-    private static String password="myPiano";   // for MySQL Workbench
+    public static String url = "jdbc:mysql://localhost:3306/piano_application";  // for MySQL Workbench
+    public static String username="root";  // for MySQL Workbench
+    public static String password="myPiano";   // for MySQL Workbench
 
     //  for Oracle Database
-//    private static String url = "jdbc:oracle:thin:@localhost:1521:xe";            // for Oracle Database
-//    private static String username="ivan";
-//    private static String password="123";
+//    public static String url = "jdbc:oracle:thin:@localhost:1521:xe";            // for Oracle Database
+//    public static String username="ivan";
+//    public static String password="123";
     public static String EncryptDecrypt(String inp)
     {
         String key = "HUNDRED";
@@ -415,6 +417,49 @@ public class SQL {
 
         return sequence;
     }
+
+//    public static void getAllSongs()
+//    {
+////        String sequence = new String();
+////        int idObtained;
+//        String GameName = new String();
+////        String ret = new String();
+//        String sqlQuery = new String();
+//        try{
+//            // step1 load the driver class
+//            Class.forName(className);
+//
+//            // step2 create the connection object
+//            Connection con = DriverManager.getConnection(url, username, password);
+//            sqlQuery = "select NAME from game";
+//
+//
+//            // step3 create the statement object
+//
+//            PreparedStatement pStmt = con.prepareStatement(sqlQuery);
+//            ResultSet rs = pStmt.executeQuery();
+//            while(rs.next())
+//            {
+//
+//                GameName = rs.getString("NAME");
+//                System.out.println(GameName);
+//                SelectGameController.songSearchModelObservableList.add(new SongSearchModel(GameName));
+//
+//            }
+//            SelectGameController.NAME.setCellValueFactory(new PropertyValueFactory<>("NAME"));
+//            SelectGameController.tableView.setItems(SelectGameController.songSearchModelObservableList);
+//
+//            // step4 drop all the connections
+//            con.close();
+//            pStmt.close();
+//        } catch (SQLException e)
+//        {
+//            System.out.println(" Error while connecting to database. Exception code : " + e);
+//        } catch (ClassNotFoundException e)
+//        {
+//            System.out.println(" Failed to register driver . Exception code : " + e );
+//        }
+//    }
     public static String getAllGames()
     {
         String sequence = new String();

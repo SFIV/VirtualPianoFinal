@@ -68,7 +68,7 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Button layoutX="304.0" layoutY="326.0" mnemonicParsing="false" onAction="#onPlayGameBC" text="Play Game" textFill="WHITE">
+            <Button fx:id="Button_PlayGame" layoutX="304.0" layoutY="326.0" mnemonicParsing="false" onAction="#onPlayGameBC" text="Play Game" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
