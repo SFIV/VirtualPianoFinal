@@ -39,7 +39,7 @@
       <Label fx:id="Verdict" alignment="CENTER" layoutX="125.0" layoutY="307.0" prefHeight="18.0" prefWidth="449.0" text="Verdict" textFill="RED" />
       <TableView fx:id="tableView" layoutX="90.0" layoutY="36.0" onMouseClicked="#onSongClick" prefHeight="272.0" prefWidth="518.0" style="-fx-background-color: transparent;">
         <columns>
-          <TableColumn fx:id="NAME" prefWidth="517.5999893188476" style="-fx-background-color: transparent;" text="Name" />
+          <TableColumn fx:id="NAME" prefWidth="401.59998321533203" style="-fx-background-color: transparent;" text="Name" />
         </columns>
       </TableView>
    </children>
