@@ -242,7 +242,7 @@ public class SQL {
                 mySettings.darkMode = rs.getInt(5);
                 mySettings.lastLog = rs.getDate(3);
                 mySettings.streak = rs.getInt(4);
-                if(Date.valueOf(java.time.LocalDate.now().minusDays(1)) == mySettings.lastLog)
+                if(Date.valueOf(java.time.LocalDate.now().minusDays(1)).equals( mySettings.lastLog))
                 {
                     mySettings.streak++;
                 }
