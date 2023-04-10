@@ -285,8 +285,8 @@ public class SQL {
     }
     public static void saveMessage(String User,String Message)
     {
-        String username = "md6p2m5o4ygwugvrj6ld";
-        String password = "pscale_pw_OAxV1OfOG8m2Efg1530h21S0XZp8SNAhEJsgci4GFO3";
+        String username = "pgx0h6z19y43ltfsf8n7";
+        String password = "pscale_pw_8O02MGRjqZXhgSkBO2gy2fTkkx7smMJSCh4wyUdtilt";
         String url = "jdbc:mysql://aws.connect.psdb.cloud/messages?sslMode=VERIFY_IDENTITY";
         String sqlQuery = new String();
         try{
@@ -294,8 +294,8 @@ public class SQL {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://aws.connect.psdb.cloud/messages?sslMode=VERIFY_IDENTITY",
-                    "md6p2m5o4ygwugvrj6ld",
-                    "pscale_pw_OAxV1OfOG8m2Efg1530h21S0XZp8SNAhEJsgci4GFO3");
+                    "pgx0h6z19y43ltfsf8n7",
+                    "pscale_pw_8O02MGRjqZXhgSkBO2gy2fTkkx7smMJSCh4wyUdtilt");
 
 
             sqlQuery = "insert into messages(username,text) values(?,?)";
@@ -325,8 +325,8 @@ public class SQL {
         String[] arr = new String[50];
         String finalMessage = new String();
         int index=0;
-        String usernameMYSQL = "md6p2m5o4ygwugvrj6ld";
-        String passwordMYSQL = "pscale_pw_OAxV1OfOG8m2Efg1530h21S0XZp8SNAhEJsgci4GFO3";
+        String usernameMYSQL = "pgx0h6z19y43ltfsf8n7";
+        String passwordMYSQL = "pscale_pw_8O02MGRjqZXhgSkBO2gy2fTkkx7smMJSCh4wyUdtilt";
         String url = "jdbc:mysql://aws.connect.psdb.cloud/messages?sslMode=VERIFY_IDENTITY";
         String sqlQuery = new String();
         try{
@@ -334,8 +334,8 @@ public class SQL {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://aws.connect.psdb.cloud/messages?sslMode=VERIFY_IDENTITY",
-                    "md6p2m5o4ygwugvrj6ld",
-                    "pscale_pw_OAxV1OfOG8m2Efg1530h21S0XZp8SNAhEJsgci4GFO3");
+                    "pgx0h6z19y43ltfsf8n7",
+                    "pscale_pw_8O02MGRjqZXhgSkBO2gy2fTkkx7smMJSCh4wyUdtilt");
             sqlQuery = "select * from messages order by sent desc";
 
 
