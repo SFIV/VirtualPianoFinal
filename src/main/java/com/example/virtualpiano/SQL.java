@@ -3,8 +3,23 @@ import java.sql.*;
 
 public class SQL {
 
-    private static String username="ivan";
-    private static String password="123";
+    private static String className = "com.mysql.cj.jdbc.Driver";   // for MySQL workbench or PlanetScale Database
+//    private static String className = "oracle.jdbc.driver.OracleDriver";  // for Oracle Database
+
+//  for PlaneScale Online Database
+//    private static String url = "jdbc:mysql://aws.connect.psdb.cloud/piano_application?sslMode=VERIFY_IDENTITY";    // for planetScale Online Database
+//    private static String username="ujuwtj5pehty8qq65f4x";    // for PlanetScale Online Database
+//    private static String password="pscale_pw_eNariAt6PloA0qudPxZ7zGHyFjyB3LmWFcgU8NLmWWu";   // for PlanetScale Online Database
+
+    // for MySQL Workbench
+    private static String url = "jdbc:mysql://localhost:3306/piano_application";  // for MySQL Workbench
+    private static String username="root";  // for MySQL Workbench
+    private static String password="myPiano";   // for MySQL Workbench
+
+    //  for Oracle Database
+//    private static String url = "jdbc:oracle:thin:@localhost:1521/xe";            // for Oracle Database
+//    private static String username="PianoProject";
+//    private static String password="123";
     public static String EncryptDecrypt(String inp)
     {
         String key = "HUNDRED";
@@ -18,11 +33,11 @@ public class SQL {
     public static boolean CheckUsernameAvailability(String UsernameToCheck)
     {
 
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery = "select * from VirtualPiano where username = ?";
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
 
@@ -50,11 +65,11 @@ public class SQL {
     }
     public static void addUser(String UsernameToAdd, String PasswordToAdd)
     {
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery = "insert into virtualpiano values (?, ?, ?, ?, ?)";
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
@@ -96,12 +111,12 @@ public class SQL {
     }
     public static boolean checkPassword(String usernameToCheck, String passwordGiven)
     {
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery = "select * from virtualpiano where username = ?";
         String acquiredPass = new String();
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
@@ -128,11 +143,11 @@ public class SQL {
     }
     public static void loadKeybinds(String User)
     {
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery;
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
@@ -166,11 +181,11 @@ public class SQL {
     }
     public static void saveKeybinds(String User)
     {
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery;
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
@@ -204,11 +219,11 @@ public class SQL {
     }
     public static void loadSettings(String User)
     {
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery;
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
@@ -250,11 +265,11 @@ public class SQL {
     }
     public static void saveSettings(String User)
     {
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery = new String();
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
@@ -375,11 +390,11 @@ public class SQL {
     public static String getGameSequence(int ID)
     {
         String sequence = new String();
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery = new String();
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
@@ -415,11 +430,11 @@ public class SQL {
         int idObtained;
         String GameName = new String();
         String ret = new String();
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery = new String();
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
@@ -456,13 +471,13 @@ public class SQL {
         int scoreObtained=0;
         System.out.println(score);
         boolean flag=false;
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery = new String();
         String sqlQuery2 = new String();
         String sqlQuery3 = new String();
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
@@ -521,11 +536,11 @@ public class SQL {
         String nameObtained="";
         boolean flag=false;
         String ret = "";
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//        String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String sqlQuery = new String();
         try{
             // step1 load the driver class
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName(className);
 
             // step2 create the connection object
             Connection con = DriverManager.getConnection(url, username, password);
